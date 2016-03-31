@@ -1,7 +1,14 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <main class="mdl-layout__content">
     <div class="page-content">
-      <router-outlet></router-outlet>
+      <section class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+          <menus-list></menus-list>
+        </div>
+      </section>
+      <div class="mdl-cell mdl-cell--9-col mdl-cell--9-col-tablet">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </main>
 </div>

@@ -10,7 +10,7 @@ module.exports = function(defaults) {
           'material-design-lite/material.js'
         ]
       }),
-      cssTree = new BroccoliSass(['src/app/styles', 'node_modules/material-design-lite/src'], './app.sass', 'styles.css');
+      cssTree = new BroccoliSass(['src/app', 'node_modules/material-design-lite/src'], './styles.sass', 'styles.css');
 
   return mergeTrees([
     app.toTree(),
