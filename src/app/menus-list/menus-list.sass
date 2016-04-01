@@ -1,7 +1,17 @@
+menus-list
+  @extend .mdl-cell
+  @extend .mdl-cell--3-col
+  @extend .mdl-cell--3-col-tablet
+
+  display: flex
+
 .menus-list
   list-style-type: none
   margin: 0
   padding: 0
+
+.menus-list__card
+  flex-grow: 1
 
 .menus-list__company
   color: unquote("rgb(#{$color-primary})")
