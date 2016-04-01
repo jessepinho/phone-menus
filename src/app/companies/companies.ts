@@ -9,10 +9,10 @@ export class Companies {
     return Promise.resolve(COMPANIES);
   }
 
-  findByName(name: string) {
+  findByLowerCaseName(name: string) {
     return this.getAll().then(function(companies) {
       return companies.find(function(company) {
-        return company.name === name;
+        return company.name.toLowerCase() === name;
       });
     });
   }

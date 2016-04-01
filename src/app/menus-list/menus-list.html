@@ -7,6 +7,7 @@
   <div class="mdl-card__supporting-text">
     <ul class="menus-list">
       <li *ngFor="#company of companies"
+          [routerLink]="['Company', { name: company.lowerCaseName }]"
           class="menus-list__company">
         {{company.name}}
       </li>

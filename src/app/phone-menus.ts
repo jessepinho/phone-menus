@@ -1,8 +1,10 @@
 import {CliRouteConfig} from './route-config';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+
 import {Companies} from './companies/companies';
 import {Component} from 'angular2/core';
 import {MenusList} from './menus-list/menus-list';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {ShowCompany} from './show-company/show-company';
 
 @Component({
   selector: 'phone-menus-app',
@@ -12,7 +14,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
   pipes: []
 })
 @RouteConfig([
-
+  { path: '/company/:name', name: 'Company', component: ShowCompany }
 ].concat(CliRouteConfig))
 
 export class PhoneMenusApp {
