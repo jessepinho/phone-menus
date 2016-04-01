@@ -5,6 +5,11 @@
     </h1>
   </div>
   <div class="mdl-card__supporting-text">
-    Menu list here
+    <ul class="menus-list">
+      <li *ngFor="#company of companies"
+          class="menus-list__company">
+        {{company.name}}
+      </li>
+    </ul>
   </div>
 </div>

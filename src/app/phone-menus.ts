@@ -1,11 +1,12 @@
 import {CliRouteConfig} from './route-config';
+import {Companies} from './companies/companies';
 import {Component} from 'angular2/core';
 import {MenusList} from './menus-list/menus-list';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 @Component({
   selector: 'phone-menus-app',
-  providers: [ROUTER_PROVIDERS],
+  providers: [ROUTER_PROVIDERS, Companies],
   templateUrl: 'app/phone-menus.html',
   directives: [ROUTER_DIRECTIVES, MenusList],
   pipes: []

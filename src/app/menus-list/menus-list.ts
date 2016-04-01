@@ -1,3 +1,5 @@
+import {Company} from '../company/company';
+import {Companies} from '../companies/companies';
 import {Component} from 'angular2/core';
 
 
@@ -9,7 +11,13 @@ import {Component} from 'angular2/core';
   pipes: []
 })
 export class MenusList {
+  constructor(private service: Companies) {}
 
-  constructor() {}
+  companies: Company[];
 
+  ngOnInit() {
+    return this.service.getAll().then((companies) => {
+      this.companies = companies;
+    });
+  }
 }
