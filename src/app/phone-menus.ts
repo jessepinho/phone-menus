@@ -14,7 +14,8 @@ import {ShowCompany} from './show-company/show-company';
   pipes: []
 })
 @RouteConfig([
-  { path: '/company/:name', name: 'Company', component: ShowCompany }
+  { path: '/:company', name: 'Company', component: ShowCompany },
+  { path: '/:company/:line', name: 'Line', component: ShowCompany }
 ].concat(CliRouteConfig))
 
 export class PhoneMenusApp {

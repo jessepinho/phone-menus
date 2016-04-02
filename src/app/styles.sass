@@ -3,9 +3,19 @@ $color-primary: $palette-blue-grey-400
 $color-accent: $palette-orange-500
 @import 'material-design-lite'
 
-@import 'menus-list/menus-list';
-@import 'show-company/show-company';
-@import 'phone-menus';
+@mixin item-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  li
+    cursor: pointer
+    display: block
+    transition: color .35s, font-size .35s
+
+    &.router-link-active
+      color: unquote("rgb(#{$color-primary})")
+      font-size: 2em
 
 body
   background: unquote("rgb(#{$palette-blue-grey-500})")
@@ -16,3 +26,7 @@ body
 html,
 body
   height: 100%
+
+@import 'menus-list/menus-list';
+@import 'show-company/show-company';
+@import 'phone-menus';

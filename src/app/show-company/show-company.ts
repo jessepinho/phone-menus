@@ -17,7 +17,7 @@ export class ShowCompany {
   company: Company;
 
   ngOnInit() {
-    let lowerCaseName = this.routeParams.get('name');
+    let lowerCaseName = this.routeParams.get('company');
     this.service.findByLowerCaseName(lowerCaseName).then((company) => {
       this.company = company;
     });

@@ -1,22 +1,12 @@
 menus-list
-  @extend .mdl-cell
-  @extend .mdl-cell--3-col
-  @extend .mdl-cell--3-col-tablet
-
-  display: flex
+  width: 50%
 
 .menus-list
-  list-style-type: none
-  margin: 0
-  padding: 0
-
-.menus-list__card
-  flex-grow: 1
+  @include item-list
 
 .menus-list__company
-  color: unquote("rgb(#{$color-primary})")
-  cursor: pointer
-  display: block
+  border-top: 1px solid $card-border-color
+  width: 100%
 
 .menus-list__title
   background-color: unquote("rgb(#{$color-accent})")

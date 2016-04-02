@@ -7,10 +7,12 @@
   <div class="mdl-card__supporting-text">
     <ul class="menus-list">
       <li *ngFor="#company of companies"
-          [routerLink]="['Company', { name: company.urlSafeName }]"
-          class="menus-list__company">
+          [routerLink]="['Company', { company: company.urlSafeName }]">
         {{company.name}}
       </li>
     </ul>
+  </div>
+  <div class="mdl-card__supporting-text menus-list__company">
+    <router-outlet></router-outlet>
   </div>
 </div>

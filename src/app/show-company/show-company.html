@@ -1,8 +1,3 @@
-<section class="show-company">
-  <h1>{{company?.name}}</h1>
-  <nav>
-    <ul>
-      <li *ngFor="#line of company?.lines">{{line.name}}</li>
-    </ul>
-  </nav>
-</section>
+<ul class="show-company__lines">
+  <li *ngFor="#line of company?.lines">{{line.name}}</li>
+</ul>
