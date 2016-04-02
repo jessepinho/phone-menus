@@ -8,7 +8,7 @@ export class Company {
     this.name = name;
   }
 
-  get lowerCaseName() {
-    return this.name.toLowerCase();
+  get urlSafeName() {
+    return this.name.toLowerCase().replace(/[^a-z]/g, '-');
   }
 }

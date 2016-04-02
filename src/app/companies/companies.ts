@@ -14,13 +14,14 @@ export class Companies {
   findByLowerCaseName(name: string) {
     return this.getAll().then(function(companies) {
       return companies.find(function(company) {
-        return company.name.toLowerCase() === name;
+        return company.urlSafeName === name;
       });
     });
   }
 }
 
 var COMPANIES = [
+  new Company('Bank of America'),
   new Company('Verizon'),
   new Company('Walgreens'),
 ];
